@@ -9,32 +9,23 @@
 This project implements a **Weather Data Storage System** using **2D arrays** and **Abstract Data Types (ADTs)**.  
 It allows efficient storage, retrieval, and analysis of weather data (temperature by city and year).  
 
----
-
-## 🎯 Objectives
-- Understand Abstract Data Types (ADT) and 2D arrays in Python.  
-- Implement a real-world data storage system.  
-- Compare **row-major vs column-major access**.  
-- Handle **sparse data** using sentinel values.  
-- Analyze **time and space complexity** of operations.  
+## 📖 Problem
+We need to build a **Weather Data Storage System** using Python.  
+The system should store temperature values for cities and years in a **2D array**,  
+allow insertion, retrieval, and comparison of **row major vs column major** access.  
+It should also handle **sparse data** using a sentinel value.  
 
 ---
 
-## ⚙️ Features
-1. **WeatherRecord ADT**  
-   - Attributes: `date`, `city`, `temperature`  
-   - Methods: Insert, Delete, Retrieve  
-
-2. **WeatherDataStorage Class**  
-   - Stores data in a 2D array (years × cities).  
-   - Supports:  
-     - `insert()` → Add weather data  
-     - `delete()` → Remove weather data  
-     - `retrieve()` → Get temperature for city & year  
-     - `rowMajorAccess()` → Access row-wise  
-     - `columnMajorAccess()` → Access column-wise  
-     - `handleSparseData()` → Replace missing values with sentinel (-999)  
-     - `analyzeComplexity()` → Shows time & space complexity  
+## ✨ Features
+1. **WeatherRecord ADT** → stores date, city, and temperature.  
+2. **WeatherDataStorage** → class with methods:  
+   - `insert()` → insert a record  
+   - `retrieve()` → get temperature by city & year  
+   - `row_major()` → row-wise access  
+   - `column_major()` → column-wise access  
+   - `handle_sparse()` → replace missing values with sentinel (-999)  
+   - `analyze_complexity()` → shows time and space complexity  
 
 ---
 
@@ -42,12 +33,17 @@ It allows efficient storage, retrieval, and analysis of weather data (temperatur
 Row Major: [15.5, None, None, None, 28.2, None, None, None, 22.1]
 Column Major: [15.5, None, None, None, 28.2, None, None, None, 22.1]
 Retrieve (Delhi, 2023): 15.5
-Sparse Representation: {(2023, 'Delhi'): 15.5, (2024, 'Mumbai'): 28.2, (2025, 'Kolkata'): 22.1}
+Sparse Data: [[15.5, -999, -999], [-999, 28.2, -999], [-999, -999, 22.1]]
 
 --- Complexity Analysis ---
 Insert: O(1)
-Delete: O(1)
 Retrieve: O(1)
 Row/Column Access: O(nm)
-Space Complexity: O(nm)
+Space: O(nm)
+****
+📚 References
+
+GeeksforGeeks – Sparse Matrix Representations
+
+W3Schools – Python Arrays
 
